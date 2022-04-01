@@ -1,7 +1,7 @@
-const accountRoutes = require('./account-routes');
-const matchRoutes = require('./match-routes');
+import leaderboardRoutes from './leaderboardRoutes.js';
+import matchRoutes from './match-routes.js';
 
-module.exports = (app) => {
-    accountRoutes(app);
+export default (app) => {
+    leaderboardRoutes(app);
     matchRoutes(app);
 }

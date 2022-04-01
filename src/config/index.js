@@ -1,11 +1,16 @@
 const PORT = 3000;
 const HOSTNAME = 'localhost';
 const BASE_URL = '/api';
+
+const PUBG_API = 'https://api.pubg.com/shards';
+const SEASON = 'division.bro.official.console-16';
 const API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOGM3MTg0MC04NTAyLTAxM2EtMjlhNS03MzRhYjM0MGEwM2QiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQ3MTc5MjQzLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InN0YXRpc3RpY3Mtb2YtIn0.uMKh2e1rPKAnERY9zDZLEDvTGKCaXlcov2nY0mgVsEU';
 
-export default {
+export default  {
     PORT,
     HOSTNAME,
     BASE_URL,
+    PUBG_API,
+    SEASON,
     API_KEY
 };

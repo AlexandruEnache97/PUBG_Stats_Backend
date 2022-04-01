@@ -1,8 +1,9 @@
-const serverConfig = require('../config/config')
-const cors = require('cors')
-const fetch = require("node-fetch");
+import cors from 'cors';
+import fetch from "node-fetch";
 
-module.exports = (app) => {
+import serverConfig from '../config/index.js';
+
+export default (app) => {
 
     app.use(cors());
 

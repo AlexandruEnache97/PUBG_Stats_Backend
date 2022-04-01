@@ -1,7 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const serverConfig = require('./config/config');
-const routes = require('./routes');
+import express from 'express';
+// const mongoose = require('mongoose');
+import routes from './routes/index.js';
+import serverConfig from './config/index.js';
 
 // create the server express
 const app = express();
