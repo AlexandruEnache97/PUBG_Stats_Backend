@@ -30,7 +30,6 @@ export default (app) => {
     app.get(`${serverConfig.BASE_URL}/getLeaderboardData`, cors(), async (req, res) => {
         try {
             LeaderboardPlayers.find({}).sort({ 'createdDate': -1 }).exec((err, results) => {
-                console.log(results);
                 if (results)
                     return res.status(200).json(results)
                 if (err)
