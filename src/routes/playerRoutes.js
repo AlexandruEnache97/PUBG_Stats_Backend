@@ -96,6 +96,9 @@ export default (app) => {
             }, cors());
 
         const data = await response.json();
+
         res.status(200).json(data);
     });
 }
+
+
