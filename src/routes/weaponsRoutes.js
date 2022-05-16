@@ -7,7 +7,7 @@ export default (app) => {
 
     app.use(cors());
 
-    app.put(`${serverConfig.BASE_URL}/saveWeaponsTested`, cors(), async (req, res) => {
+    app.post(`${serverConfig.BASE_URL}/saveWeaponsTested`, cors(), async (req, res) => {
         try {
             const body = req.body;
             const dataToDb = new WeaponsTested({
