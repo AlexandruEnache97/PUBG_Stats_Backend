@@ -63,7 +63,6 @@ export default (app) => {
             });
 
             const doc = await dataToDb.save();
-
             res.status(200).json(doc);
         } catch (err) {
             return res.status(500).send("Something went wrong");
