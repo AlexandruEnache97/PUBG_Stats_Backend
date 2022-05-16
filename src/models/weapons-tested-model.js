@@ -146,6 +146,9 @@ const weaponsTestedSchema = new mongoose.Schema({
     Item_Weapon_vz61Skorpion_C: {
         type: Number,
     },
+    date: {
+        type: Date,
+    }
 });
 
 export default mongoose.model('WeaponsTested', weaponsTestedSchema);
