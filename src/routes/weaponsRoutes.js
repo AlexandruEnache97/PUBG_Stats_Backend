@@ -7,6 +7,21 @@ export default (app) => {
 
     app.use(cors());
 
+    app.get(`${serverConfig.BASE_URL}/getWeaponsTested`, cors(), async (req, res) => {
+        try {
+            WeaponsTested.find().exec((err, result) => {
+                if (result) {
+                    return res.status(200).json(result)
+                }
+                if (err) {
+                    return res.status(404).send("Not found")
+                }
+            })
+        } catch (error) {
+            return res.status(500).send("Something went wrong");
+        }
+    })
+
     app.post(`${serverConfig.BASE_URL}/saveWeaponsTested`, cors(), async (req, res) => {
         try {
             const body = req.body;
@@ -68,7 +83,6 @@ export default (app) => {
         } catch (err) {
             return res.status(500).send("Something went wrong");
         }
-
     });
 }
 
